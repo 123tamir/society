@@ -1,0 +1,14 @@
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+  email VARCHAR(100) UNIQUE NOT NULL,
+  password TEXT NOT NULL,
+  flat_no VARCHAR(10)
+);
+
+CREATE TABLE bills (
+  id SERIAL PRIMARY KEY,
+  user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+  amount NUMERIC(10, 2),
+  month VARCHAR(20)
+);
