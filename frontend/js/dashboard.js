@@ -2,7 +2,7 @@ window.onload = async () => {
   const token = localStorage.getItem('token');
   if (!token) return window.location.href = 'login.html';
 
-  const res = await fetch('http://localhost:5000/api/users/bills', {
+  const res = await fetch('https://society-5hkq.onrender.com/api/users/bills', {
     headers: { 'Authorization': 'Bearer ' + token }
   });
 
