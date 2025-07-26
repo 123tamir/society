@@ -7,7 +7,7 @@ document.getElementById('registerForm').addEventListener('submit', async (e) => 
     flat_no: document.getElementById('flat_no').value
   };
 
-  const res = await fetch('http://localhost:5000/api/users/register', {
+  const res = await fetch('https://society-5hkq.onrender.com/api/users/register', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(data)
